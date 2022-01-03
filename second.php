@@ -2,19 +2,29 @@
 
 <body>
     <?php
-    echo "\n new line";
+    echo "<br>************* (1) ***********<br>";
+    echo nl2br( "new\n line");
+    echo "<br>************* (2) ***********<br>";
     $lenghth = strlen("alieldin");
-    echo '<br>';
+    echo "first function length = ";
     echo $lenghth;
     echo "<br>";
-
+    echo "second function eords count = ";
     echo str_word_count("CMS Tack hello world!");
     echo "<br>";
-
+    echo "third function  position of world = ";
     echo strpos("Hello Cms track world!", "world");
     echo "<br>";
+
+    echo "<br>************* (3) ***********<br>";
+
+    foreach($_SERVER as $serv){
+        echo nl2br($serv."\n");
+    }
+
+    echo "<br>************* (4) ***********<br>";
+
     $array1 = [12, 45, 10, 25];
-    echo $array1[0];
     $sum = 0;
     for ($i = 0; $i < count($array1); $i++) {
         $sum += $array1[$i];
